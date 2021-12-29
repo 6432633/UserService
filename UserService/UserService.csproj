@@ -1,0 +1,107 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Data\IUserRepository.cs" />
+    <Compile Include="Data\SqlUserRepository.cs" />
+    <Compile Include="Data\UserContext.cs" />
+    <Compile Include="DTO\UserCreateDTO.cs" />
+    <Compile Include="DTO\UserReadDTO.cs" />
+    <Compile Include="DTO\UserUpdateDTo.cs" />
+    <Compile Include="Migrations\20211228142832_InitialMigration.cs" />
+    <Compile Include="Migrations\20211228142832_InitialMigration.Designer.cs" />
+    <Compile Include="Migrations\UserContextModelSnapshot.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net6.0\UserService.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net6.0\UserService.GlobalUsings.g.cs" />
+    <Compile Include="obj\Debug\net6.0\UserService.MvcApplicationPartsAssemblyInfo.cs" />
+    <Compile Include="Profiles\UserProfile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include=".vscode\launch.json" />
+    <Content Include="bin\Debug\net6.0\appsettings.Development.json" />
+    <Content Include="bin\Debug\net6.0\appsettings.json" />
+    <Content Include="bin\Debug\net6.0\UserService.deps.json" />
+    <Content Include="bin\Debug\net6.0\UserService.runtimeconfig.json" />
+    <Content Include="obj\Debug\net6.0\project.razor.json" />
+    <Content Include="obj\Debug\net6.0\staticwebassets.build.json" />
+    <Content Include="obj\Debug\net6.0\UserService.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\UserService.csproj.nuget.dgspec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.OpenApi.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll" />
+    <None Include="bin\Debug\net6.0\Npgsql.dll" />
+    <None Include="bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll" />
+    <None Include="bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll" />
+    <None Include="bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <None Include="bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <None Include="bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll" />
+    <None Include="bin\Debug\net6.0\System.Security.Permissions.dll" />
+    <None Include="bin\Debug\net6.0\System.Windows.Extensions.dll" />
+    <None Include="bin\Debug\net6.0\UserService.dll" />
+    <None Include="bin\Debug\net6.0\UserService.exe" />
+    <None Include="bin\Debug\net6.0\UserService.pdb" />
+    <None Include="obj\Debug\net6.0\apphost.exe" />
+    <None Include="obj\Debug\net6.0\ref\UserService.dll" />
+    <None Include="obj\Debug\net6.0\UserService.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net6.0\UserService.assets.cache" />
+    <None Include="obj\Debug\net6.0\UserService.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net6.0\UserService.csproj.CopyComplete" />
+    <None Include="obj\Debug\net6.0\UserService.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net6.0\UserService.dll" />
+    <None Include="obj\Debug\net6.0\UserService.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net6.0\UserService.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net6.0\UserService.MvcApplicationPartsAssemblyInfo.cache" />
+    <None Include="obj\Debug\net6.0\UserService.pdb" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\Release\net6.0\UserService.AssemblyInfoInputs.cache" />
+    <None Include="obj\Release\net6.0\UserService.assets.cache" />
+    <None Include="obj\Release\net6.0\UserService.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\staticwebassets.pack.sentinel" />
+    <None Include="obj\UserService.csproj.nuget.g.props" />
+    <None Include="obj\UserService.csproj.nuget.g.targets" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MiNET" Version="1.0.2291" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Release\net6.0\ref\" />
+    <Folder Include="obj\Debug\net6.0\staticwebassets\" />
+    <Folder Include="obj\Release\net6.0\staticwebassets\" />
+  </ItemGroup>
+
+</Project>
